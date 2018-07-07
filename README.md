@@ -16,14 +16,16 @@ using the "weighted ensemble" approach of Huber and Kim (1996).
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/westpa-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/westpa-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/westpa-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/westpa-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/westpa-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/westpa-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/westpa-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/westpa-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/westpa/badges/version.svg)](https://anaconda.org/conda-forge/westpa)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/westpa/badges/downloads.svg)](https://anaconda.org/conda-forge/westpa)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-westpa-green.svg)](https://anaconda.org/conda-forge/westpa) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/westpa.svg)](https://anaconda.org/conda-forge/westpa) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/westpa.svg)](https://anaconda.org/conda-forge/westpa) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/westpa.svg)](https://anaconda.org/conda-forge/westpa) |
 
 Installing westpa
 =================
