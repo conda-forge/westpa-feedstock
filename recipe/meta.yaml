@@ -19,12 +19,12 @@ build:
 requirements:
   build:
     - python
-    - toolchain
+    - {{ compiler('c') }}
     - cython
     - numpy 1.11.*
   run:
     - python
-    - numpy >=1.11
+    - {{ pin_compatible('numpy', lower_bound='1.11.x') }}
     - scipy 1.0.*
     - h5py 2.7.*
     - pyyaml 3.12
