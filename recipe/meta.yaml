@@ -18,8 +18,9 @@ build:
 
 requirements:
   build:
-    - python
     - {{ compiler('c') }}
+  host:
+    - python
     - cython
     - numpy 1.11.*
   run:
