@@ -18,8 +18,10 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
+    - setuptools
     - python
-    - toolchain
     - cython
     - numpy 1.11.*
   run:
