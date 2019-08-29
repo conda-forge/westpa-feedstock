@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: './setup.sh && cp -r $SRC_DIR $PREFIX'
   skip: True  # [win or py3k]
 
@@ -29,6 +29,7 @@ requirements:
     - h5py 2.7.*
     - pyyaml 3.12
     - pyzmq 16.0.*
+    - matplotlib
 
 test:
   commands:
