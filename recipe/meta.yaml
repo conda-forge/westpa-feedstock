@@ -27,7 +27,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - scipy 1.0.*
+    - scipy
     - h5py 2.7.*
     - pyyaml 3.12
     - pyzmq 16.0.*
