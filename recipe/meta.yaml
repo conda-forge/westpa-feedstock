@@ -13,7 +13,7 @@ source:
 
 build:
   number: 1
-  script: './setup.sh && cp -r $SRC_DIR $PREFIX'
+  script: './setup.sh && mkdir -p ${PREFIX}/${PKG_NAME}-${PKG_VERSION} && cp -r ${SRC_DIR}/* ${PREFIX}/${PKG_NAME}-${PKG_VERSION}'
   skip: True  # [win or py3k]
 
 requirements:
