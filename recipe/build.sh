@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ./setup.sh
 mkdir -p ${PREFIX}/${PKG_NAME}-${PKG_VERSION}
 cp -r ${SRC_DIR}/* ${PREFIX}/${PKG_NAME}-${PKG_VERSION}
