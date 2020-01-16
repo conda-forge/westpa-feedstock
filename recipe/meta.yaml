@@ -1,6 +1,6 @@
-{% set name = "westpa" %}
-{% set version = "2017.10" %}
-{% set sha256 = "3129dd1d651c4fe542599f2d5ecdbff09e5d704ea8c97c8ae7dca7b0bd4598a6" %}
+{% set name = "westpa_py3" %}
+{% set version = "master" %}
+{% set sha256 = "d6c3043c230e5023b85fae895c2e636320bfa061ee8e32554667333df1f7cfc6" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,15 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/westpa/westpa/archive/v{{ version }}.tar.gz
+  #url: https://github.com/westpa/westpa/archive/v{{ version }}.tar.gz
+  url: https://github.com/mczwier/westpa_py3/archive/{{ version }}.tar.gz
+  #url: https://github.com/mczwier/westpa_py3/archive/master.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 1
-  skip: True  # [win or py3k]
+  skip: True  # [win]
+  ## skip: True  # [win or py3k]
 
 requirements:
   build:
@@ -22,15 +25,16 @@ requirements:
     - setuptools
     - python
     - cython
-    - numpy 1.11.*
+    - numpy 1.16.*
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - scipy
-    - h5py 2.7.*
-    - pyyaml 3.12.*
-    - pyzmq 16.0.*
+    - h5py 2.9.*
+    - pyyaml 5.1.*
+    - pyzmq 18.0.*
     - matplotlib
+    - blessings 1.7.*
 
 test:
   commands:
