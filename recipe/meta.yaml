@@ -30,7 +30,7 @@ requirements:
     - h5py 2.9.*
     - pyyaml 5.1.*
     - pyzmq 18.0.*
-    - matplotlib
+    - matplotlib-base
     - blessings 1.7.*
 
 test:
