@@ -21,10 +21,13 @@ EOC
 
 cat << EOD >> ${PREFIX}/etc/conda/deactivate.d/env_vars.sh
 #!/usr/bin/env bash
+export PATH=:\${PATH}: # Wrap with colon to prevent special case
+export PATH=\${PATH//:\$WEST_BIN:} # Remove the Path
+export PATH=\${PATH#:} # Remove start colon
+export PATH=\${PATH%:} # Remove end colon
 unset WEST_ROOT
 unset WEST_BIN
 unset WEST_PYTHON
-export PATH=${PATH#${PREFIX}/${PKG_NAME}-${PKG_VERSION}/bin:}
 EOD
 
 # Clean up of previously set codes in activate.d
