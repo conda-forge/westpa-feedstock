@@ -12,14 +12,14 @@ WEST_PYTHON=$WEST_PYTHON $WEST_PYTHON .westpa_gen.py
 chmod +x westpa.sh
 
 # Export WESTPA environment variables
-mkdir -p ${CONDA_PREFIX}/etc/conda/{activate,deactivate}.d
-touch ${CONDA_PREFIX}/etc/conda/{activate,deactivate}.d/env_vars.sh
-cat << EOC >> ${CONDA_PREFIX}/etc/conda/activate.d/env_vars.sh
+mkdir -p ${PREFIX}/etc/conda/{activate,deactivate}.d
+touch ${PREFIX}/etc/conda/{activate,deactivate}.d/env_vars.sh
+cat << EOC >> ${PREFIX}/etc/conda/activate.d/env_vars.sh
 #!/usr/bin/env bash
 . ${PREFIX}/${PKG_NAME}-${PKG_VERSION}/westpa.sh
 EOC
 
-cat << EOD >> ${CONDA_PREFIX}/etc/conda/deactivate.d/env_vars.sh
+cat << EOD >> ${PREFIX}/etc/conda/deactivate.d/env_vars.sh
 #!/usr/bin/env bash
 unset WEST_ROOT
 unset WEST_BIN
