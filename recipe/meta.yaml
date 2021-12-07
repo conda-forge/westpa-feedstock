@@ -20,20 +20,20 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - setuptools>=40.8.0
+    - setuptools >=40.8.0
     - python
     - wheel
-    - cython>=0.29.16
-    - numpy>=1.16
-    - scipy>=0.19.1
+    - cython >=0.29.16
+    - numpy >=1.16
+    - scipy >=0.19.1
     - versioneer-518
     - pip
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - scipy>=0.19.1
-    - h5py>=2.10
-    - mdtraj>=1.9.5
+    - scipy >=0.19.1
+    - h5py >=2.10
+    - mdtraj >=1.9.5
     - pyyaml 5.3.*
     - pyzmq 19.0.*
     - matplotlib-base
