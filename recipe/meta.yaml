@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0 
+  number: 1
   skip: True  # [win or py2k]
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
 
@@ -23,6 +23,7 @@ requirements:
     - cython >=0.29.16                       # [build_platform != target_platform]
     - numpy >=1.16, <2                       # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - setuptools >=40.8.0
     - python
