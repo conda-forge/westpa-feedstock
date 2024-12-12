@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py2k]
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
 
@@ -36,7 +36,6 @@ requirements:
     - pip
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - scipy >=0.19.1
     - h5py >=2.10
     - mdtraj >=1.9.5
