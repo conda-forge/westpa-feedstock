@@ -51,7 +51,9 @@ requirements:
     - tqdm
     - pandas
     - pytables
-    - netCDF4
+    - if: match(python, "<3.11")
+      then:
+        - netCDF4
 
 tests:
   - python:
