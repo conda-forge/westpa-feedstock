@@ -51,7 +51,7 @@ requirements:
     - tqdm
     - pandas
     - pytables
-    - if: match(python, "<3.11")
+    - if: match(python, "<3.11")  # Dependency fix for MDTraj 1.10.3
       then:
         - netCDF4
 
