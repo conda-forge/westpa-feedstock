@@ -51,6 +51,7 @@ requirements:
     - tqdm
     - pandas
     - pytables
+    - netCDF4
 
 tests:
   - python:
