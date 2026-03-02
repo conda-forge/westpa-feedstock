@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: westpa
-  version: 2022.14
-  sha256: 8245aea1dd5d2d16764dae8d74c82fa33efe0684bb93b65fbdee55e7ac02e409
+  version: 2022.15
+  sha256: b11ae8ced0fcf01351ba71ce602817fd18c8dc731bce773788fb4ca6009c4f91
 
 package:
   name: ${{ name|lower }}
