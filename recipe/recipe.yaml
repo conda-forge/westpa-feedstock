@@ -3,7 +3,7 @@ schema_version: 1
 context:
   name: westpa
   version: 2022.15
-  sha256: b11ae8ced0fcf01351ba71ce602817fd18c8dc731bce773788fb4ca6009c4f91
+  sha256: 4f30a83e395a0d7db38e5fbad6a7dce12b710a3e6ede7497c7b341651d1888e9
 
 package:
   name: ${{ name|lower }}
@@ -14,7 +14,7 @@ source:
   sha256: ${{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: win
   script: ${{ PYTHON }} -m pip install . -vv --no-deps
 
