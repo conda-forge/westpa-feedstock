@@ -3,7 +3,7 @@ schema_version: 1
 context:
   name: westpa
   version: "2022.16"
-  sha256: 4f919fe05217a2babb372732821867ef776fdb77b810d8c1cbc8cc547ffc7b98 
+  sha256: daee4c4def2a0d35306fb1e72aab8403d57dec3c6526a396f445e1bdfb043405
 
 package:
   name: ${{ name|lower }}
@@ -14,10 +14,9 @@ source:
   sha256: ${{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: 
     - win
-    - linux and aarch64 and match(python, "<3.11")
   script: ${{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
@@ -53,9 +52,6 @@ requirements:
     - tqdm
     - pandas
     - pytables
-    - if: match(python, "<3.11")  # Dependency fix for MDTraj 1.10.3
-      then:
-        - netCDF4
 
 tests:
   - python:
